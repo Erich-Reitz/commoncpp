@@ -6,10 +6,11 @@
 namespace m_std {
 
     std::vector<std::string> readLinesOfFile(std::ifstream &input);
+    std::vector<std::string> readLinesOfFile(const std::string filename); 
 
     std::string readFile(std::ifstream &input);
 
-    std::string readFile(std::string filename);
+    std::string readFile(const std::string filename);
 
     int findFirstIndexOfString(const std::vector<std::string> &lines, const std::string &str);
 

@@ -32,9 +32,25 @@ std::vector<std::string> readLinesOfFile(std::ifstream &input) {
     while (std::getline(input, line)) {
         data.push_back(line);
     }
-
     std::cout << INFO << "Read " << data.size() << " lines from file" << std::endl;
-    closeFile(input); 
+    closeFile(input);
+    return data;
+}
+
+std::vector<std::string> readLinesOfFile(const std::string filename) {
+    /*
+        * Reads all lines of a file into a vector of strings.
+        * @param input: The file to read from.
+        * @return: A vector of strings containing all lines of the file.
+    */
+    std::ifstream input = openFile(filename);
+    std::vector<std::string> data;
+    std::string line;
+    while (std::getline(input, line)) {
+        data.push_back(line);
+    }
+    std::cout << INFO << "Read " << data.size() << " lines from file" << std::endl;
+    closeFile(input);
     return data;
 }
 

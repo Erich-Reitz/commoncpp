@@ -23,8 +23,8 @@ void removeBracingBrackets(std::string &str) {
         std::cerr << "WARNING::" << "Malformed string sent to removeBracingBrackets" << std::endl;
         throw std::runtime_error("Malformed string sent to removeBracingBrackets");
     }
-    
-    str.erase(str.end()-1); str.erase(str.begin());
+    str.erase(str.end()-1);
+    str.erase(str.begin());
 }
 
 std::string convertToSpaceSeperatedString(char **array, int startingIndex) {
